@@ -17,4 +17,4 @@ A Java project that demonstrates JUnit 5 features.
 * [Migrating from JUnit 4 to JUnit 5 | oracle.com](https://blogs.oracle.com/javamagazine/post/migrating-from-junit-4-to-junit-5-important-differences-and-benefits)
 
 ## Core Classes
-* [Junit5DemoTest.java](https://github.com/navrwork/unit-testing/blob/main/Junit5Demo/src/test/java/com/navr/junit5/demo/Junit4DemoTest.java)
+* [Junit5DemoTest.java](https://github.com/navrwork/unit-testing/blob/main/Junit5Demo/src/test/java/com/navr/junit5/demo/Junit5DemoTest.java)
