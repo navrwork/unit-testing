@@ -1,4 +1,4 @@
-package com.navr.junitdemo;
+package com.navr.junit4.demo;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

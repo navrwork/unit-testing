@@ -1,4 +1,4 @@
-package com.navr.junitdemo;
+package com.navr.junit4.demo;
 
 /**
  * Hello world!

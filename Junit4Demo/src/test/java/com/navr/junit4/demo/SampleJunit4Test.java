@@ -1,4 +1,4 @@
-package com.navr.junitdemo;
+package com.navr.junit4.demo;
 
 import org.junit.*;
 import org.junit.runners.MethodSorters;
