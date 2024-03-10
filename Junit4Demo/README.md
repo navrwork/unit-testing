@@ -17,4 +17,4 @@ A Java project that demonstrates JUnit 4 features.
 * [Custom JUnit 4 Test Runners](https://www.baeldung.com/junit-4-custom-runners)
 
 ## Core Classes
-* [SampleJunit4Test.java] (https://github.com/navrwork/unit-testing/blob/main/Junit4Demo/src/test/java/com/navr/junitdemo/SampleJunit4Test.java)
+* [SampleJunit4Test.java](https://github.com/navrwork/unit-testing/blob/main/Junit4Demo/src/test/java/com/navr/junitdemo/SampleJunit4Test.java)
