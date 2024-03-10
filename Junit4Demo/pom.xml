@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.navr.junitdemo</groupId>
-  <artifactId>Junit4Demo</artifactId>
+  <artifactId>JUnit4Demo</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>Junit4Demo</name>
+  <name>JUnit4Demo</name>
   <url>http://maven.apache.org</url>
 
   <properties>
