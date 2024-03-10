@@ -5,7 +5,7 @@ A Java project that demonstrates JUnit 4 features.
 
 ## Tech Stack
 
-**Java:** Java 11 (Note: JUnit 4 doesn't support Java 8 features)
+**Java:** Java 11 (Note: JUnit 4 requires Java 5 or higher and doesn't support Java 8 specific features)
 
 **Maven:** 3.9.x
 
