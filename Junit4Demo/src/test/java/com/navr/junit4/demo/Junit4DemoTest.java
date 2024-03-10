@@ -4,7 +4,7 @@ import org.junit.*;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SampleJunit4Test {
+public class Junit4DemoTest {
 
     @BeforeClass
     public static void beforeClass() {
