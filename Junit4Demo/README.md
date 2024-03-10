@@ -9,7 +9,7 @@ A Java project that demonstrates JUnit 4 features.
 
 **Maven:** 3.9.x
 
-**JUnit:** 4.13
+**JUnit:** 4.13.x
 
 ## Reference
 * [Junit 4 Samples](https://github.com/junit-team/junit4/tree/main/src/test/java/junit/samples)
@@ -18,4 +18,4 @@ A Java project that demonstrates JUnit 4 features.
 * [Custom JUnit 4 Test Runners](https://www.baeldung.com/junit-4-custom-runners)
 
 ## Core Classes
-* [SampleJunit4Test.java](https://github.com/navrwork/unit-testing/blob/main/Junit4Demo/src/test/java/com/navr/junitdemo/SampleJunit4Test.java)
+* [Junit4DemoTest.java](https://github.com/navrwork/unit-testing/blob/main/Junit4Demo/src/test/java/com/navr/junit4.demo/Junit4DemoTest.java)
