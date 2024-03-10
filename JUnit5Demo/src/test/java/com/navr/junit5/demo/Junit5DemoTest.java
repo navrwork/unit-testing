@@ -103,10 +103,10 @@ public class Junit5DemoTest {
         System.out.println("Junit5DemoTest: Inside test_12_executeBeforeTimeout() ..");
         // do something before timeout
         Executable executable = () -> {
-            // call some service here
-            System.out.println("Inside executable");
+            System.out.println("Inside timeout executable");
+            //java.util.concurrent.TimeUnit.SECONDS.sleep(2); // Uncomment this to trigger timeout
         };
-        Assertions.assertTimeout(Duration.ofMillis(100), executable);
+        Assertions.assertTimeout(Duration.ofMillis(100), executable, "Executable timed out!");
     }
 
     @Disabled

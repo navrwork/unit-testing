@@ -17,6 +17,8 @@ A Java project that demonstrates JUnit 4 features.
 * [Unit Testing with JUnit 4 | vogella.com](https://www.vogella.com/tutorials/JUnit4/article.html)
 * [Extending TestCase vs @Test | stackoverflow.com](https://stackoverflow.com/questions/2635839/junit-confusion-use-extends-testcase-or-test/2635946#2635946)
 * [Custom JUnit 4 Test Runners | baeldung.com](https://www.baeldung.com/junit-4-custom-runners)
+* [Aggregating tests in suites | github.com](https://github.com/junit-team/junit4/wiki/Aggregating-tests-in-suites)
+* [JUnit Test Suite | browserstack.com](https://www.browserstack.com/guide/junit-test-suite)
 
 ## Core Classes
 * [Junit4DemoTest.java](https://github.com/navrwork/unit-testing/blob/main/Junit4Demo/src/test/java/com/navr/junit4/demo/Junit4DemoTest.java)
