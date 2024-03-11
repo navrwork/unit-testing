@@ -20,4 +20,4 @@ A Java project that demonstrates JUnit 5 features.
 * [How Do You Differentiate JUnit 4 Tests With JUnit 5 | qasource.com](https://blog.qasource.com/software-development-and-qa-tips/how-do-you-differentiate-junit-4-tests-with-junit-5)
 
 ## Core Classes
-* [Junit5DemoTest.java](https://github.com/navrwork/unit-testing/blob/main/Junit5Demo/src/test/java/com/navr/junit5/demo/Junit5DemoTest.java)
+* [Junit5DemoTest.java](https://github.com/navrwork/unit-testing/blob/main/JUnit5Demo/src/test/java/com/navr/junit5/demo/Junit5DemoTest.java)
