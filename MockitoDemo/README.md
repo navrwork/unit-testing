@@ -62,4 +62,5 @@ A Java project that demonstrates Mockito framework and JaCoCo features.
 
 
 ### Sample JaCoCo Code Coverage Report
+<img width="893" alt="demo_jacoco_coverage" src="https://github.com/navrwork/unit-testing/assets/149756645/23295b39-21e5-4af3-bfd3-5c1edd8df3ef">
 
