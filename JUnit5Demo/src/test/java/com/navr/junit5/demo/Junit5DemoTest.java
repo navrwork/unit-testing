@@ -1,7 +1,18 @@
 package com.navr.junit5.demo;
 
 
-import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Assumptions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
 import org.junit.jupiter.api.condition.DisabledOnOs;
 import org.junit.jupiter.api.condition.EnabledOnOs;
 import org.junit.jupiter.api.condition.OS;
@@ -13,8 +24,6 @@ import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.List;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -156,8 +165,8 @@ public class Junit5DemoTest {
      * The test will be executed ONLY if the assumption is true.
      */
     @Test
-    public void test_13_assumptions() {
-        System.out.println("Junit5DemoTest: Inside test_13_assumptions() ..");
+    public void test_14_assumptions() {
+        System.out.println("Junit5DemoTest: Inside test_14_assumptions() ..");
         Assumptions.assumeTrue("DEV".equals(System.getProperty("ENV")));
         String s1 = new String("hello");
         String s2 = new String("Hello");
@@ -172,34 +181,34 @@ public class Junit5DemoTest {
     @RepeatedTest(value = 5,
             name = "repetition #{currentRepetition} of {totalRepetitions}"
     )
-    public void test_14_repeatedTest() {
+    public void test_15_repeatedTest() {
         int a = (int) (Math.random() * 1000);
         int b = (int) (Math.random() * 1000);
-        int result = calc.add(a, b);
-        System.out.printf("test_14_repeatedTest: a=%d, b=%d, result=%d%n", a, b, result);
+        long result = calc.add(a, b);
+        System.out.printf("test_15_repeatedTest: a=%d, b=%d, result=%d%n", a, b, result);
     }
 
     @ParameterizedTest
     @ValueSource(ints={10,20})
-    public void test_15_parameterizedTestValueSource(int a) {
+    public void test_16_parameterizedTestValueSource(int a) {
         int b = (int) (Math.random() * 1000);
-        int result = calc.add(a, b);
-        System.out.printf("test_15_parameterizedTestValueSource: a=%d, b=%d, result=%d%n", a, b, result);
+        long result = calc.add(a, b);
+        System.out.printf("test_16_parameterizedTestValueSource: a=%d, b=%d, result=%d%n", a, b, result);
     }
 
     @ParameterizedTest
     @CsvSource({"test,TEST", "tEst,TEST", "Java,JAVA"})
-    void test_16_parameterizedTestCsvSource(String input, String expected) {
-        System.out.printf("test_16_parameterizedTestCsvSource: input=%s, expected=%s%n", input, expected);
+    void test_17_parameterizedTestCsvSource(String input, String expected) {
+        System.out.printf("test_17_parameterizedTestCsvSource: input=%s, expected=%s%n", input, expected);
         String actualValue = input.toUpperCase();
         assertEquals(expected, actualValue);
     }
 
     @ParameterizedTest
     @MethodSource ("getParamTestData")
-    void test_17_parameterizedTestMethodSource(String input, String expected) {
+    void test_18_parameterizedTestMethodSource(String input, String expected) {
         String actualValue = input.toUpperCase();
-        System.out.printf("test_17_parameterizedTestMethodSource: input=%s, expected=%s%n", input, expected);
+        System.out.printf("test_18_parameterizedTestMethodSource: input=%s, expected=%s%n", input, expected);
         assertEquals(expected, actualValue);
     }
 

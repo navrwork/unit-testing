@@ -1,9 +1,12 @@
 package com.navr.junit4.demo;
 
 import org.junit.*;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@RunWith(JUnit4.class) // Optional. Default runner.
 public class Junit4DemoTest {
 
     @BeforeClass

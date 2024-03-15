@@ -9,6 +9,7 @@ import com.navr.mockitodemo.bookservice.EmailService;
 import com.navr.mockitodemo.bookservice.Lender;
 import com.navr.mockitodemo.bookservice.LenderRepository;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -54,6 +55,7 @@ public class BookServiceTest {
         when(mockBookLenderRepository.findLenderByBookId("b1002", LocalDate.now())).thenReturn("l50002");
     }
 
+    @Order()
     @Test
     public void test_01_FindAll() {
         List<Book> allBooks = this.bookService.findAll();
