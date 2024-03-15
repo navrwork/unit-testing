@@ -16,7 +16,7 @@ import static org.mockito.Mockito.times;
  * Mockito example for static methods.
  */
 @TestMethodOrder(MethodOrderer.MethodName.class)
-public class CalculatorUtilTest {
+public class MockedStaticTest {
 
     /**
      * Mock a static no-arg method with void return

@@ -23,6 +23,9 @@ A Java project that demonstrates Mockito framework and JaCoCo features.
 * [Mock Static Methods | baeldung.com](https://www.baeldung.com/mockito-mock-static-methods)
 * [Mock Void Methods | baeldung.com](https://www.baeldung.com/mockito-void-methods)
 * [Mockito Verify | digitalocean.com](https://www.digitalocean.com/community/tutorials/mockito-verify)
+* [Mockito Annotations | baeldung.com](https://www.baeldung.com/mockito-annotations)
+* [doReturn vs thenReturn | github.io](https://sangsoonam.github.io/2019/02/04/mockito-doreturn-vs-thenreturn.html)
+* [UnnecessaryStubbingException  | baeldung.com](https://www.baeldung.com/mockito-unnecessary-stubbing-exception)
 
 ### Test Doubles
 * [Inside 5 types of test doubles | techtarget.com](https://www.techtarget.com/searchsoftwarequality/tip/Inside-5-types-of-test-doubles)
