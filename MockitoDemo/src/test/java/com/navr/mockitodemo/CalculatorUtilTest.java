@@ -12,6 +12,9 @@ import static org.mockito.Mockito.anyString;
 import static org.mockito.Mockito.mockStatic;
 import static org.mockito.Mockito.times;
 
+/**
+ * Mockito example for static methods.
+ */
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class CalculatorUtilTest {
 
@@ -21,18 +24,22 @@ public class CalculatorUtilTest {
     @Test
     public void test_01_PrintHello() {
         // Mock static class in try block
-        try (MockedStatic<CalculatorUtil> mockedCalcUtil = Mockito.mockStatic(CalculatorUtil.class)) {
+        try (MockedStatic<CalculatorUtil> mockedStatic = Mockito.mockStatic(CalculatorUtil.class)) {
             //
             // #1: Mock the static method call
             //
-            mockedCalcUtil.when(CalculatorUtil::printHello).then(invocationOnMock -> {
-                System.out.println("Mock Hello!");
-                return null;
-            });
+            mockedStatic
+                    .when(CalculatorUtil::printHello)
+                    .then(invocationOnMock -> {
+                        System.out.println("Mock Hello!");
+                        return null;
+                    });
             //
             // OR the below can be used as well to mock static method
             //
-            mockedCalcUtil.when(CalculatorUtil::printHello).then(invocationOnMock -> null);
+            mockedStatic
+                    .when(CalculatorUtil::printHello)
+                    .then(invocationOnMock -> null);
 
             //
             // #2: Invoke the actual static method
@@ -42,8 +49,8 @@ public class CalculatorUtilTest {
             //
             // #3: Validate if the method call indeed happened
             //
-            mockedCalcUtil.verify(CalculatorUtil::printHello);
-            mockedCalcUtil.verify(CalculatorUtil::printHello, Mockito.times(1));
+            mockedStatic.verify(CalculatorUtil::printHello);
+            mockedStatic.verify(CalculatorUtil::printHello, Mockito.times(1));
         }
     }
 
@@ -64,16 +71,20 @@ public class CalculatorUtilTest {
             //
             // OR use the below
             //
-            mockedStatic.when(() -> CalculatorUtil.printMessage(anyString())).then(invocationOnMock -> {
-                System.out.println("Mock message!");
-                return null;
-            });
+            mockedStatic
+                    .when(() -> CalculatorUtil.printMessage(anyString()))
+                    .then(invocationOnMock -> {
+                        System.out.println("Mock message!");
+                        return null;
+                    });
 
             // #2: Invoke actual method
             CalculatorUtil.printMessage("hi");
 
             // #3: Verify
-            mockedStatic.verify(() -> CalculatorUtil.printMessage(anyString()), Mockito.times(1));
+            mockedStatic.verify(
+                    () -> CalculatorUtil.printMessage(anyString()), Mockito.times(1)
+            );
         }
     }
 
@@ -85,7 +96,8 @@ public class CalculatorUtilTest {
         final String MOCKED_RESULT = "mock_abcd";
         try (MockedStatic<CalculatorUtil> mockedStatic = mockStatic(CalculatorUtil.class)) {
             // #1: Mock method call
-            mockedStatic.when(() -> CalculatorUtil.concat(anyString(), anyString()))
+            mockedStatic
+                    .when(() -> CalculatorUtil.concat(anyString(), anyString()))
                     .then(invocationOnMock -> MOCKED_RESULT);
 
             //
@@ -96,7 +108,9 @@ public class CalculatorUtilTest {
 
             // #3: Verify
             Assertions.assertEquals(MOCKED_RESULT, mockedResult);
-            mockedStatic.verify(() -> CalculatorUtil.concat(anyString(), anyString()), times(1));
+            mockedStatic.verify(
+                    () -> CalculatorUtil.concat(anyString(), anyString()), times(1)
+            );
         }
     }
 }
