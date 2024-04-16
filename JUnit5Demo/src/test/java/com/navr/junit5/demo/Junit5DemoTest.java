@@ -111,7 +111,7 @@ public class Junit5DemoTest {
         System.out.println("Junit5DemoTest: Inside test_08_assertNotSame() ..");
         String s1 = new String("hello");
         String s2 = new String("Hello");
-        Assertions.assertNotSame(s1, s2); // s1==s2 => FALSE
+        Assertions.assertNotSame(s1, s2); // s1!=s2 => TRUE
     }
 
     @Test

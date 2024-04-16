@@ -23,10 +23,10 @@ public class MockedStaticTest {
      */
     @Test
     public void test_01_PrintHello() {
-        // Mock static class in try block
+        // Mock class with static methods using try-with-resources block
         try (MockedStatic<CalculatorUtil> mockedStatic = Mockito.mockStatic(CalculatorUtil.class)) {
             //
-            // #1: Mock the static method call
+            // #1: Mock the no-arg void static method call
             //
             mockedStatic
                     .when(CalculatorUtil::printHello)
@@ -60,7 +60,7 @@ public class MockedStaticTest {
     @Test
     public void test_02_PrintMessage() {
         //
-        // Static method with
+        // Mock one-arg static method call
         //
         try (MockedStatic<CalculatorUtil> mockedStatic = Mockito.mockStatic(CalculatorUtil.class)) {
             // #1: Mock method call
